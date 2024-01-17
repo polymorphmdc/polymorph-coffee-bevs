@@ -1,0 +1,71 @@
+---
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../confs";
+const {title = '☕'} = Astro.props;
+
+---
+
+    
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+        
+        <meta name="description" content={SITE_DESCRIPTION}>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+		<title>{title} | {SITE_TITLE}</title>
+	</head>
+	<body class="dark antialiased">
+        <main class=" scroll-smooth flex flex-col lg:flex-wrap font-Lato min-h-svh overflow-y-auto   bg-zinc-100  dark:bg-gradient-to-tr dark:from-[#0e0e0f] dark:to-[#20232c] ">
+		<header class="  ">
+            <div class=" select-none place-content-evenly sm:place-content-center sm:flex-col border-b-2 mt-5  border-zinc-300   dark:border-zinc-800 ">
+            <img src='s.webp' class="mt-5  mx-auto   bg-amber-500  " style="border-radius: 50%; width: 60px; height: 60px;" aria-label="Polymorph Logo">
+            
+            <h1 class="tracking-widest   mt-2 text-center font-black text-xl md:text-2xl text-[#efbe20] font-Brice  ">POLYMORPH</h1>
+            <h2 class="mx-auto italic text-center font-medium text-md md:text-lg mb-2 text-[#efbe20] font-Brice  ">Coffee & Beverages</h2>
+            <button class="toggleButton mb-2 mx-2 md:scale-100 scale-90 absolute top-2 right-2  rounded-full bg-zinc-200 dark:bg-gray-800  space-x-2 px-1 pt-0.5 w-max h-6  text-amber-400 " id="toggleButton" ><ion-icon name="moon"></ion-icon> <ion-icon name="sunny"></ion-icon><div class="p-3 dark:translate-x-7 absolute bottom-0 transition-colors duration-200 right-7 rounded-full bg-slate-400 dark:bg-slate-600"></div></button>
+        </div>
+
+        </header>
+
+        <slot/>
+
+        
+    </main>
+    <footer class="">
+        <div class="px-5 pt-5 pb-5 md:py-5 bg-zinc-200 dark:bg-zinc-900 w-full   space-y-10 text-zinc-800 dark:text-zinc-400 font-semibold text-sm lg:text-lg grid grid-cols-2 grid-rows-1 justify-between">
+          <p class="col-span-2 mb-0 text-lg md:text-2xl text-center">About Us</p>
+          <p class="col-span-2 text-center mx-auto md:px-5  tracking-wider md:leading-loose font-normal text-zinc-600 dark:text-zinc-300"> Polymorph Coffee & Beverages adalah UMKM yang menjual kopi dan berbagai varian minuman ringan lainnya dengan menggunakan sepeda motor. Polymorph Coffee & Beverages berlokasi di jl.Flamboyan, kel. Sario Kotabaru, kec. Sario kota Manado. Polymorph Coffee & Beverages beroperasi mulai dari jam 18:00 WITA sampai 00:00 WITA.  </p>
+          <div class="border-b-2 border-zinc-400 dark:border-zinc-800 col-span-2 pt-3"></div>
+          <p class="col-span-2 mb-4 text-lg md:text-2xl text-center">Location</p>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.062709145304!2d124.8377007!3d1.4641501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287750042a3dbe9%3A0xa1cfc69750382796!2sPolymorph%20coffee%20%26%20beverages!5e0!3m2!1sid!2sid!4v1704946021742!5m2!1sid!2sid" width="" height="" class="w-3/4 mx-auto col-span-2   " style="border: 0%; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+          <div class="border-b-2 border-zinc-400 dark:border-zinc-800 col-span-2 pt-3"></div>
+          
+          <p class="col-span-2 mb-4 text-lg md:text-2xl text-center    ">Contact</p>
+    
+          <div class=""><p class=" text-start md:text-center  "><ion-icon name="logo-whatsapp"></ion-icon> Whatsapp </p></div>
+          <div class=" text-end md:mx-auto"><a class=" text-end md:text-center text-zinc-600 dark:text-zinc-300  underline " href="https://wa.me/6285175023122">+62 851-7502-3122</a>     </div>
+          <div><p class="text-start md:text-center "><ion-icon name="logo-instagram"></ion-icon> Instagram</p></div>
+          <div class=" text-end md:mx-auto "><a class=" text-end  md:text-center  text-zinc-600 dark:text-zinc-300  underline  " href="https://www.instagram.com/polymorph.mdc/">@polymorph.mdc</a></div>
+          
+        </div>
+    </footer>
+	</body>
+
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function ready() {
+        const button = document.getElementById("toggleButton");
+        button?.addEventListener("click", () => {
+          // document.getElementById("main").classList.toggle("dark");
+          document.body.classList.toggle("dark");
+        });
+      });
+
+    
+    </script>
+</html>

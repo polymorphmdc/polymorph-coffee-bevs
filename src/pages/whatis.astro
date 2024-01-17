@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import { Image } from "astro:assets";
+import  hmd  from "../images/whatis/hmd.webp"
+import  monitor  from "../images/whatis/monitor.webp"
+import  pc  from "../images/whatis/pc.webp"
+import  phone  from "../images/whatis/phone.webp"
+import  tablet  from "../images/whatis/tablet.webp"
+
+
+const {title = '☕ Apa itu AR?'} = Astro.props;
+---
+
+<MainLayout title={title}>
+
+    <main class="mx-5">
+<h1 class="  text-3xl  lg:text-4xl text-left lg:font-bold font-semibold text-zinc-800 dark:text-zinc-200 mt-20  " >Apa itu AR ?</h1>
+  <div class="scroll-smooth mt-5 lg:mt-10 mb-5 font-medium select-none overflow-y-auto  overflow-x-hidden    rounded-lg bg-gradient-to-tr from-[#e9e9f0] to-[#ececf5] dark:from-[#0e0e0f] shadow-xl shadow-zinc-300 dark:shadow-zinc-950 dark:text-neutral-400 text-zinc-700 py-5  mx-auto lg:mx-0 w-full  ">
+
+  <article class="h-80  sm:h-auto md:max-w-none select-none space-y-3  text-justify px-5  scroll-smooth prose  lg:prose-lg ">
+    <p class="text-lg indent-5 mb-10">Augmented Reality atau AR adalah salah satu teknologi yang menggabungkan dunia nyata dengan objek virtual, 
+        baik 2D maupun 3D dan dapat ditampilkan secara real-time. AR memiliki beberapa teknik untuk menampilkan objek virtual, 
+        seperti Marker Based, Markerless, Face Recognition dan lain-lain. 
+        Smartphone, Tablet, PC, Monitor dan Head Mounted Display adalah perangkat yang dapat digunakan untuk menampilkan AR. 
+        Sebagai contohnya, anda dapat melihatnya pada gambar-gambar dibawah. </p>
+      <div class="lg:grid lg:grid-cols-3 lg:gap-y-10 dark:text-zinc-100   lg:justify-items-center">
+        
+        <div>
+        <h3 class="text-lg mb-3">Smartphone</h3>
+        <Image src={phone}  class="rounded-xl w-72 lg:h-48" alt="Smartphone"> <!--https://cdn-bocdd.nitrocdn.com/HVBjtMJNipoZqehbxISQmnReBemWYQfv/assets/images/optimized/rev-50b89e0/appsamurai.com/wp-content/uploads/2017/08/augmented-reality.jpg -->
+        </div>
+
+        <div>
+        <h3 class="text-lg mb-3 lg:mt-0 mt-10 ">Tablet</h3>
+        <Image src={tablet}  class="rounded-xl w-72 lg:h-48" alt="Tablet"> <!--https://iptek.co.id/wp-content/uploads/2023/01/Perangkat-Pendukung-Augmented-Reality-1-1.jpg -->
+        </div>
+
+        <div>
+        <h3 class=" mb-3 lg:mt-0 mt-10 text-lg">PC</h3>
+        <Image src={pc} class="rounded-xl w-72 lg:h-48" alt="Pc"> <!--https://itcl.es/wp-content/uploads/2014/09/M3SRN3S06raumIM01-realidad-aumentada-itcl.jpg -->
+        </div>
+
+        <div>
+        <h3 class="mb-3 lg:mt-0 mt-10 text-lg">Monitor</h3>
+        <Image src={monitor} class="rounded-xl w-72 lg:h-48" alt="Monitor"> <!--https://images.deccanherald.com/deccanherald%2F2023-09%2Ff8149fe5-6d97-4522-8f02-d6fc2e1fa097%2FSony_Spatial_Reality_Display_Cs_2.jpg?format=webp&q=70&w=900&dpr=1 -->
+        </div>
+
+        <div>
+        <h3 class="mb-3 lg:mt-0 mt-10 text-lg ">Head Mounted Display</h3>
+        <Image src={hmd} class="rounded-xl w-72 lg:h-48" alt="HMD"> <!--https://www.lifewire.com/thmb/AYx_5Jb8hkE2xh58WUExVBgRZxk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-735894471-30b7ab7753c242cd847b2a7fbfd1d154.jpg -->
+        </div>
+        <div class="pb-1"></div>
+      </div>
+  </article>  
+  </div>
+  <a class="text-lg font-semibold text-zinc-700 dark:text-zinc-200 mb-10 mt-3 py-2 bg-gradient-to-t from-gray-300 shadow-inner dark:shadow-zinc-900 dark:bg-gradient-to-t dark:from-zinc-900 w-max px-5 flex flex-wrap rounded-lg " href="./">Main Menu</a>
+</main>
+</MainLayout>

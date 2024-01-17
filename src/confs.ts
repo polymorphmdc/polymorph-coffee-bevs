@@ -1,0 +1,2 @@
+export const SITE_TITLE = 'Polymorph Coffee & Beverages';
+export const SITE_DESCRIPTION = 'Polymorph Coffee & Beverages adalah UMKM yang menjual kopi dan berbagai varian minuman ringan lainnya dengan menggunakan sepeda motor';

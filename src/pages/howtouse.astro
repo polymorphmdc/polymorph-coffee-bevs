@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import { Image } from "astro:assets";
+import  bike1  from "../images/how-pic/1.jpg"
+import  time  from "../images/how-pic/4.webp"
+
+import  menu1  from "../images/how-pic/top1.jpg"
+const {title = '☕ Cara Penggunaan'} = Astro.props;
+---
+
+<MainLayout title={title}>
+    <main class="mx-5">
+    <h1 class="  text-3xl  lg:text-4xl text-left lg:font-bold font-semibold text-zinc-800 dark:text-zinc-200 mt-20  " >Cara Penggunaan</h1>
+    <div class=" scroll-smooth mt-5 lg:mt-10 mb-5 font-semibold select-none  overflow-y-auto  overflow-x-hidden    rounded-lg bg-gradient-to-tr from-[#e9e9f0] to-[#ececf5] dark:from-[#0e0e0f] shadow-xl shadow-zinc-300 dark:shadow-zinc-950 dark:text-neutral-400 text-zinc-700 py-5  mx-auto lg:mx-0 w-full  ">
+  
+    <article class="h-80  sm:h-auto md:max-w-none select-none  text-justify px-5  scroll-smooth prose  lg:prose-lg ">
+      <h2 class="text-xl  pb-3 bg-gradient-to-t from-gray-300 shadow-inner dark:shadow-zinc-900 dark:bg-gradient-to-t dark:from-zinc-900  px-2 pt-3 rounded-lg ">3D Bike</h2>
+    <ul class="list-disc space-y-10  text-lg">
+      
+     <li class="font-medium mt-5 ml-5 ">
+      Pada halaman utama, klik tombol <text class="font-semibold">3D Bike</text> untuk menampilkan konten AR Motor Kopi Polymorph.
+     </li>
+     <Image src={bike1} alt="Langkah 1 Bike" class=" rounded-xl w-72">
+  
+     <li class="font-medium mt-5 ml-5 ">
+      Arahkan kamera pada kartu yang memiliki logo Polymorph
+     </li>
+     <!-- <img src="src/img/how-pic/" class=" rounded-xl w-72"> -->
+  
+     <li class="font-medium mt-5 ml-5 ">
+      Usapkan jari pada layar ke kiri atau kanan untuk memutar arah konten AR Motor Kopi Polymorph
+     </li>
+     <!-- <img src="src/img/how-pic/" class="rounded-xl w-72"> -->
+  
+     <li class="font-medium mt-5 ml-5  ">
+      Proses deteksi kartu dapat dilakukan selama 30 detik, jika waktu habis silahkan refresh halaman untuk melakukan deteksi. Tapi jika konten AR sudah muncul dan waktu habis, anda masih bisa berinteraksi dengan konten AR Motor Kopi Polymorph
+     </li>
+     <Image src={time} class="ml-2  rounded-xl w-72" alt="Batas waktu 30 detik">
+     <div class="pb-5"></div>
+    </ul>
+  <!-- ########################################################################### -->
+  <h2 class="text-xl mt-10 pb-3 bg-gradient-to-t from-gray-300 shadow-inner dark:shadow-zinc-900 dark:bg-gradient-to-t dark:from-zinc-900 px-2 pt-3 rounded-lg ">Top 5 Menu</h2>
+  <ul class="list-disc space-y-10  text-lg">
+    
+   <li class="font-medium mt-5 ml-5 ">
+    Pada halaman utama, klik tombol <text class="font-semibold">Top 5 Menu</text> untuk menampilkan konten AR Top 5 Menu.
+   </li>
+   <Image src={menu1} class=" rounded-xl w-72" alt="Langkah 1 menu">
+  
+   <li class="font-medium mt-5 ml-5 ">
+    Arahkan kamera pada kartu yang bertuliskan Top 5 Menu
+   </li>
+   <!-- <img src="src/img/how-pic/" class=" rounded-xl w-72"> -->
+  
+   <li class="font-medium mt-5 ml-5 ">
+    Usapkan jari pada layar ke kiri atau kanan untuk melihat lima varian menu yang paling disukai pada Motor Kopi Polymorph dalam bentuk konten AR
+   </li>
+   <!-- <img src="src/img/how-pic/" class="rounded-xl w-72"> -->
+  
+   <li class="font-medium mt-5 ml-5  ">
+    Proses deteksi kartu dapat dilakukan selama 30 detik, jika waktu habis silahkan refresh halaman untuk melakukan deteksi. Tapi jika konten AR sudah muncul dan waktu habis, anda masih bisa berinteraksi dengan konten AR Motor Kopi Polymorph
+   </li>
+   <Image src={time} class="ml-2  rounded-xl w-72" alt="Batas waktu 30 detik">
+   <div class="pb-1"></div>
+  </ul>
+    </article>  
+    </div>
+    <a class="text-lg font-semibold text-zinc-700 dark:text-zinc-200 mb-10 mt-3 py-2 bg-gradient-to-t from-gray-300 shadow-inner dark:shadow-zinc-900 dark:bg-gradient-to-t dark:from-zinc-900 w-max px-5 flex flex-wrap rounded-lg " href="./">Main Menu</a>
+</main>
+</MainLayout>
